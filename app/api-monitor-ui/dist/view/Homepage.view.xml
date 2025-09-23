@@ -1,0 +1,67 @@
+<mvc:View controllerName="com.sap.cep.apimonitoringapp.apimonitorui.controller.Homepage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="mainPage" title="{i18n>title}" showHeader="false">
+    <Panel id="requestPanel" width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+		<headerToolbar>
+			<OverflowToolbar id="ofToolbar">
+				<Title id="panelTitle" text="API Monitoring Request"/>
+			</OverflowToolbar>
+		</headerToolbar>
+		<content>
+        <VBox id="vBox1">
+			<Label id="requestTypeLbl" text="Request Type"/>
+            <ComboBox
+                id="slctRequestType"
+                selectionChange=".onSelectionChange"
+                items="{
+                    path: 'RequestTypeModel>/RequestType'
+                }">
+                    <core:ListItem id = "itmRequestType" key="{RequestTypeModel>key}" text="{RequestTypeModel>text}"/>
+            </ComboBox>
+            <MessageStrip
+                id="msgStrp1"
+				text="{i18n>messageNotif}"
+				showIcon="true"
+				showCloseButton="true"
+				class="sapUiMediumMarginBottom">
+			</MessageStrip>
+            <Label id="requestBodyLbl" text="Request Body"/>
+            <FlexBox id="fBox1" alignContent="Center" width="100%" height="100%" justifyContent="Center" alignItems="Stretch">
+                <TextArea id="RequestBody"
+                    width="100%"
+                    wrapping="Soft"
+                    placeholder="Provide request body here:"
+                    rows="10"
+                    growing="true"
+                    growingMaxLines="20">
+                    <layoutData>
+                        <FlexItemData id="fID1" growFactor="1" />
+                    </layoutData>
+                </TextArea>
+                <Button id="BtnSend" text="Send" icon="sap-icon://paper-plane" press=".onSend" />
+            </FlexBox>
+            <!-- <FeedInput
+                id="RequestBody"
+                post=".onPost"
+                placeholder="Provide request body here:"
+                growing="true"
+                growingMaxLines="20"
+                showIcon="false">
+            </FeedInput> -->
+            <Label id="requestResponseLbl" text="Request Response"/>
+                <TextArea 
+                    id="RequestResponse" 
+                    placeholder="Request response will be shown here" 
+                    growing="true" 
+                    growingMaxLines="20"
+                    width="100%" 
+                    editable="false"
+                    wrapping = "Soft"/>
+            <Button id="copyBtn" press=".onPressCopy" icon="sap-icon://copy" type="Emphasized" text="Copy Response"/>
+            </VBox>
+        </content>
+	</Panel>
+    </Page>
+</mvc:View>
