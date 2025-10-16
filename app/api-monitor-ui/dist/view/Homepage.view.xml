@@ -4,11 +4,11 @@
     xmlns="sap.m">
     <Page id="mainPage" title="{i18n>title}" showHeader="false">
     <Panel id="requestPanel" width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
-		<headerToolbar>
+		<!-- <headerToolbar>
 			<OverflowToolbar id="ofToolbar">
 				<Title id="panelTitle" text="API Monitoring Request"/>
 			</OverflowToolbar>
-		</headerToolbar>
+		</headerToolbar> -->
 		<content>
         <VBox id="vBox1">
 			<Label id="requestTypeLbl" text="Request Type"/>
@@ -35,7 +35,8 @@
                     placeholder="Provide request body here:"
                     rows="10"
                     growing="true"
-                    growingMaxLines="20">
+                    growingMaxLines="20"
+                    enabled="false">
                     <layoutData>
                         <FlexItemData id="fID1" growFactor="1" />
                     </layoutData>

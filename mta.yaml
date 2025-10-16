@@ -9,7 +9,7 @@ modules:
   requires:
   - name: uaa_api-monitoring
   - name: api-monitoring-destination-service
-  - name: interconnect-cloud-logging
+  - name: interconnect-cloud-logging_new
   provides:
   - name: srv-api
     properties:
@@ -114,7 +114,7 @@ resources:
     service: xsuaa
     service-name: api-monitoring-xsuaa-service
     service-plan: application
-- name: interconnect-cloud-logging
+- name: interconnect-cloud-logging_new
   type: org.cloudfoundry.existing-service
 parameters:
   deploy_mode: html5-repo

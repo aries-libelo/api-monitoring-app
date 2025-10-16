@@ -6,9 +6,13 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^4.1.2",
+    "@sap-cloud-sdk/http-client": "^4.1.2",
     "@sap/cds": "^9",
     "@sap/xssec": "^4.9.2",
-    "express": "^4"
+    "cf-nodejs-logging-support": "^7.4.0",
+    "express": "^4",
+    "https": "^1.0.0"
   },
   "engines": {
     "node": ">=20"
