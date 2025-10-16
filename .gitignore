@@ -8,6 +8,7 @@ default-*.json
 gen/
 node_modules/
 target/
+resources/
 
 # Web IDE, App Studio
 .che/
@@ -22,6 +23,7 @@ mta_archives/
 .DS_Store
 *.orig
 *.log
+app/api-monitor-ui/dist/
 
 *.iml
 *.flattened-pom.xml
